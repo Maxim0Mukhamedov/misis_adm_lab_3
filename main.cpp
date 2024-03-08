@@ -11,9 +11,7 @@ void sequenceTest() {
     adm::Sequence S(n);
     std::cout << "Задайте последовательность: ";
     for (int i = 0; i < S.length; i++){
-        int x = 0;
-        std::cin >> x;
-        S.insert(0,x);
+        std::cin >> S[i];
     }
     std::cout << std::endl;
 
@@ -91,3 +89,4 @@ int main() {
     }
     return 0;
 }
+
