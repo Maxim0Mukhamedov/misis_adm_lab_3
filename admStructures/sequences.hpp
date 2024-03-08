@@ -31,8 +31,6 @@ namespace adm {
                 return;
             }
 
-            // Увеличиваем размер массива, если требуется
-            if (index == length) {
                 int* newData = new int[length + 1];
                 for (int i = 0; i < length; i++) {
                     newData[i] = data[i];
@@ -40,7 +38,6 @@ namespace adm {
                 delete[] data;
                 data = newData;
                 length++;
-            }
 
             // Сдвигаем элементы вправо, чтобы освободить место
             for (int i = length - 1; i >= index + 1; i--) {
@@ -70,7 +67,9 @@ namespace adm {
             return item;
         }
     };
+
 }
 
 
 #endif //ADM345_SEQUENCES_HPP
+
